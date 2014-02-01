@@ -1,5 +1,8 @@
+var attr = DS.attr, hasMany = DS.hasMany;
+
 export default DS.Model.extend({
-  name: DS.attr('string'),
-  year: DS.attr('string'),
-  poster_url: DS.attr('string')
+  name: attr('string'),
+  year: attr('string'),
+  poster_url: attr('string'),
+  triggers: hasMany('trigger')
 });

@@ -1,3 +1,7 @@
 <img {{bindAttr src="poster_url"}}></img>
 
 <h1>{{name}} ({{year}})</h1>
+
+{{#each triggers}}
+  {{content}}
+{{/each}}
