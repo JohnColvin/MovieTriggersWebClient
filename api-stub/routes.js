@@ -9,11 +9,15 @@ module.exports = function(server) {
 			  "movies": [
 			  	{
 				    "id": 1,
-				    "name": "Up"
+				    "name": "Up",
+				    "year": "2009",
+				    "poster_url": "http://content7.flixster.com/movie/10/89/43/10894361_det.jpg"
 				  },
 				  {
 				  	"id": 2,
-				  	"name": "Blade Runner"
+				  	"name": "Blade Runner",
+				  	"year": "1982",
+				  	"poster_url": "http://content9.flixster.com/movie/11/16/67/11166783_det.jpg"
 				  }
 			  ]
 			}
@@ -25,7 +29,9 @@ module.exports = function(server) {
 			var movie = {
 					  "movie": {
 					    "id": 1,
-					    "name": "Up"
+					    "name": "Up",
+					    "year": "2009",
+					    "poster_url": "http://content7.flixster.com/movie/10/89/43/10894361_det.jpg"
 					  }
 					};
 

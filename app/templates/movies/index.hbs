@@ -1,5 +1,12 @@
 <h2>Titles</h2>
 
-{{#each}}
-  <h3>{{name}}</h3>
-{{/each}}
+<table>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td><img {{bindAttr src="poster_url"}}></img></td>
+        <td>{{name}} ({{year}})</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
