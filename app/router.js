@@ -6,8 +6,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('component-test');
   this.route('helper-test');
-  this.resource('titles', function () {
-    this.route('title', {path: '/:title_id'});
+  this.resource('movies', function () {
+    this.route('movie', {path: '/:movie_id'});
   });
 });
 

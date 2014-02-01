@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
   model: function () {
-    return this.store.find('title', 1);
+    return this.modelFor('movies');
   }
 });

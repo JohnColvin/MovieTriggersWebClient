@@ -4,9 +4,9 @@ module.exports = function(server) {
   // have to be repeated for each end point.
 	server.namespace('/api', function() {
 
-		server.get('/titles', function(req, res) {
-			var titles = {
-			  "titles": [
+		server.get('/movies', function(req, res) {
+			var movies = {
+			  "movies": [
 			  	{
 				    "id": 1,
 				    "name": "Up"
@@ -17,19 +17,19 @@ module.exports = function(server) {
 				  }
 			  ]
 			}
-			res.send(titles);
+			res.send(movies);
 		});
 
 		// Return fixture data for '/api/posts/:id'
-		server.get('/titles/:id', function(req, res) {
-			var title = {
-					  "title": {
+		server.get('/movies/:id', function(req, res) {
+			var movie = {
+					  "movie": {
 					    "id": 1,
 					    "name": "Up"
 					  }
 					};
 
-			res.send(title);
+			res.send(movie);
 		});
 
 	});
