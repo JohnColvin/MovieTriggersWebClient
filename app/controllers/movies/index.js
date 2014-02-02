@@ -12,7 +12,7 @@ export default Ember.ArrayController.extend({
     var movies = [];
     if (term) {
       movies = this.store.find('movie', { q: term });
-      var that = this
+      var that = this;
       movies.then(function () {
         that.searchCompleted();
       });
@@ -25,5 +25,11 @@ export default Ember.ArrayController.extend({
 
   searchCompleted: function () {
     this.set('searchInProgress', false);
+  },
+
+  actions: {
+    goToMovie: function (id) {
+      this.transitionToRoute('movies.movie', id);
+    }
   }
 });

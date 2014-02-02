@@ -23,7 +23,7 @@
     <table>
       <tbody>
         {{#each}}
-          <tr>
+          <tr {{action "goToMovie" id on="click"}}>
             <td><img {{bind-attr src="poster_url"}}></img></td>
             <td>{{name}} ({{year}})</td>
             <td>{{triggers.length}} Triggers</td>
