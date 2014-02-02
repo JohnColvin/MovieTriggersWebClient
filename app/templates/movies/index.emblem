@@ -1,0 +1,27 @@
+#movies
+  h2 Movies
+
+  div
+    = input type="text" value=searchTerm
+
+    h3
+      if searchTerm
+        if searchInProgress
+          | Searching...
+        else
+          if content
+            ' Movies matching
+          else
+            ' No movies match
+          em= searchTerm
+
+  if content
+    unless searchInProgress
+      table#search
+        tbody
+          each
+            tr click="goToMovie id"
+              td
+                img src=poster_url
+              td #{name} (#{year})
+              td #{triggers.length} Triggers

@@ -1,0 +1,6 @@
+img src=poster_url
+
+h1 #{name} (#{year})
+
+each triggers
+  = content
