@@ -17,11 +17,12 @@
 
   if content
     unless searchInProgress
-      table#search
-        tbody
-          each
-            tr click="goToMovie id"
-              td
-                img src=poster_url
-              td #{name} (#{year})
-              td #{triggers.length} Triggers
+      each
+        .search-result click="goToMovie id"
+          .basic-info
+            img src=poster_url
+            .name
+              ' #{name}
+              if year
+                span.year (#{year})
+          .triggers #{triggers.length} Triggers
