@@ -1,12 +1,29 @@
 export default Ember.ArrayController.extend({
   searchTerm: '',
-  content: function () {
+  searchInProgress: '',
+
+  searchTermChanged: function () {
+    this.set('searchInProgress', true);
+    Ember.run.debounce(this, this.search, 400);
+  }.observes('searchTerm'),
+
+  search: function () {
     var term = this.get('searchTerm');
+    var movies = [];
     if (term) {
-      return this.store.find('movie', { q: term });
+      movies = this.store.find('movie', { q: term });
+      var that = this
+      movies.then(function () {
+        that.searchCompleted();
+      });
     }
     else {
-      return [];
+      this.searchCompleted();
     }
-  }.property('searchTerm')
+    this.set('content', movies);
+  },
+
+  searchCompleted: function () {
+    this.set('searchInProgress', false);
+  }
 });
