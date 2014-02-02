@@ -25,4 +25,6 @@
               ' #{name}
               if year
                 span.year (#{year})
-          .triggers #{triggers.length} Triggers
+          .triggers
+            each triggers
+              .trigger-label= content

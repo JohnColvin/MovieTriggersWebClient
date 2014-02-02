@@ -8,12 +8,14 @@
     margin-top: 4px
     border: 1px solid transparent
     border-radius: 8px
+    height: 90px
+    overflow: hidden
 
     &:hover
       cursor: pointer
-      border-color: $purple
+      border-color: $green
       opacity: 1
-      background-color: $light-purple
+      background-color: $light-green
 
     .basic-info
       +span-columns(4)
@@ -34,4 +36,10 @@
           font-size: 12px
 
     .triggers
-      +span-columns(4)
+      +span-columns(8)
+
+      .trigger-label
+        display: inline-block
+        margin-left: 4px
+        margin-bottom: 6px
+        font-size: 18px
