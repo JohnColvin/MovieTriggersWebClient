@@ -1,0 +1,13 @@
+%box
+  border: 1px solid transparent
+  +rounded-corners
+  padding: 4px 8px
+  +transition(border-color 0.4s ease-in-out)
+  +transition(background-color 0.6s ease-in-out)
+  overflow: hidden
+
+%label
+  @extend %box
+  text-align: center
+  background-color: $light-gray
+  color: $dark-gray

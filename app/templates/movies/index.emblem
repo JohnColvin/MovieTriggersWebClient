@@ -28,3 +28,7 @@
           .triggers
             each triggers
               .trigger-label= content
+            else
+              .no-triggers-message No triggers
+
+        .divider
