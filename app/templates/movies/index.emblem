@@ -1,19 +1,20 @@
 #movies
   h2 Movies
 
-  div
+  #search-box
     = input type="text" value=searchTerm
 
-    h3
-      if searchTerm
+    if searchTerm
+      #search-status
         if searchInProgress
-          | Searching...
+          ' Searching
         else
           if content
-            ' Movies matching
+            ' Results
           else
-            ' No movies match
-          em= searchTerm
+            ' No results
+        ' for movies titled
+        strong= searchTerm
 
   if content
     unless searchInProgress
