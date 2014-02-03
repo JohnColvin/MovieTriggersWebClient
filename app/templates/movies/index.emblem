@@ -2,7 +2,7 @@
   h2 Movies
 
   #search-box
-    = input type="text" value=searchTerm
+    = input type="text" value=searchTerm placeholder="What movie are you looking for?"
 
     if searchTerm
       #search-status
@@ -19,6 +19,8 @@
   if content
     unless searchInProgress
       each
+        .divider
+
         .search-result click="goToMovie id"
           .basic-info
             img src=poster_url
@@ -33,5 +35,3 @@
                 .trigger-label= content
             else
               .no-triggers-message 0 triggers
-
-        .divider
