@@ -26,9 +26,11 @@
               if year
                 span.year (#{year})
           .triggers
-            each triggers
-              .trigger-label= content
+            if triggers
+              .trigger-count #{triggers.length} triggers
+              each triggers
+                .trigger-label= content
             else
-              .no-triggers-message No triggers
+              .no-triggers-message 0 triggers
 
         .divider
