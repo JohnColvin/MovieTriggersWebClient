@@ -1,6 +1,4 @@
 #movies
-  h2 Movies
-
   #search-box
     = input type="text" value=searchTerm placeholder="What movie are you looking for?"
 
