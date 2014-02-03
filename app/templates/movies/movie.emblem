@@ -1,6 +1,20 @@
-img src=poster_url
+#movie-details
+  #movie
+    #poster
+      img src=poster_url
 
-h1 #{name} (#{year})
+    #info
+      #basic
+        span#name= name
+        if year
+          span#year (#{year})
 
-each triggers
-  = content
+        span.trigger-count
+          | #{triggers.length} Triggers
+
+      .divider
+
+      #triggers
+        each triggers
+          .trigger-label
+            = content

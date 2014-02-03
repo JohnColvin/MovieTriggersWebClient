@@ -1,0 +1,40 @@
+#movie-details
+
+  #movie
+    +outer-container
+
+    #poster
+      +span-columns(2)
+
+    #info
+      +span-columns(10)
+
+      #basic
+        height: 32px
+
+        #name, #year
+          display: inline
+          vertical-align: bottom
+
+        #name
+          font-size: 36px
+          font-weight: bold
+          margin-right: 10px
+
+        #year
+          color: $gray
+          font-size: 28px
+
+      .trigger-count
+        float: right
+
+      .trigger-label
+        margin-right: 8px
+
+      .trigger-label, .trigger-count
+        display: inline-block
+        font-size: 18px
+
+        &:hover
+          border-color: $purple
+          cursor: pointer
