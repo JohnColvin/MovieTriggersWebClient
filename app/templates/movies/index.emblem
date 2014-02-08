@@ -4,14 +4,7 @@
 
     if searchTerm
       #search-status
-        if searchInProgress
-          ' Searching
-        else
-          if content
-            ' Results
-          else
-            ' No results
-        ' for movies titled
+        = searchMessage
         strong= searchTerm
 
   if content
