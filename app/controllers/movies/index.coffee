@@ -23,15 +23,21 @@ MoviesIndexController = Em.ArrayController.extend
     this.set 'searchInProgress', false
 
   searchMessage: (->
-    prefix = if @get 'searchInProgress'
-      'Searching'
-    else
-      if @get 'content.length'
-        'Results'
-      else
-        'No results'
+    prefix = switch @get('searchStatus')
+      when 'searching' then 'Searching'
+      when 'have-results' then 'Results'
+      else 'No results'
 
     prefix + ' for movies titled '
+  ).property 'searchStatus'
+
+  searchStatus: (->
+    if @get 'searchInProgress'
+      'searching'
+    else if @get 'content.length'
+      'have-results'
+    else
+      'no-results'
   ).property 'searchInProgress', 'content.length'
 
   actions:

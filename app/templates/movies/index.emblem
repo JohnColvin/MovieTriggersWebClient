@@ -3,7 +3,7 @@
     = input type="text" value=searchTerm placeholder="What movie are you looking for?"
 
     if searchTerm
-      #search-status
+      #search-status class=searchStatus
         = searchMessage
         strong= searchTerm
 
