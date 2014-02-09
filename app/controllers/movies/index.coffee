@@ -42,6 +42,6 @@ MoviesIndexController = Em.ArrayController.extend
 
   actions:
     goToMovie: (id) ->
-      this.transitionToRoute 'movies.movie', id
+      this.transitionToRoute 'movie', id
 
 `export default MoviesIndexController`
