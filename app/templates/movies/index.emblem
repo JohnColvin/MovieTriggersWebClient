@@ -21,8 +21,8 @@
                 span.year (#{year})
           .triggers
             if triggers
-              .trigger-count #{triggers.length} triggers
-              each triggers
+              .trigger-count #{tags.length} triggers
+              each tags
                 .trigger-label= content
             else
               .no-triggers-message 0 triggers

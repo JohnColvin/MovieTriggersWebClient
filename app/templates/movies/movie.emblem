@@ -10,11 +10,11 @@
           span#year (#{year})
 
         span.trigger-count
-          | #{triggers.length} Triggers
+          | #{tags.length} Triggers
 
       .divider
 
       #triggers
-        each triggers
+        each tags
           .trigger-label
             = content

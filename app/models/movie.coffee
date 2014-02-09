@@ -2,6 +2,7 @@ Movie = DS.Model.extend
   name: DS.attr('string'),
   year: DS.attr('string'),
   poster_url: DS.attr('string'),
-  triggers: DS.hasMany('trigger')
+  tags: DS.hasMany('tag'),
+  warnings: DS.hasMany('warning')
 
 `export default Movie`
