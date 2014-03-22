@@ -15,6 +15,9 @@
       .divider
 
       #triggers
-        each tags
-          .trigger-label
-            = content
+        each warnings
+          = link-to 'warning' this
+            .trigger-label
+              = tag.content
+
+= outlet

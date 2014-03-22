@@ -1,0 +1,8 @@
+#warning-details
+  #warning
+    #tag= tag.content
+    #vote-count= voteCount
+
+  #comments
+    each comments
+      .comment= content
