@@ -12,17 +12,18 @@
       each
         .divider
 
-        .search-result click="goToMovie id"
-          .basic-info
-            img src=poster_url
-            .name
-              ' #{name}
-              if year
-                span.year (#{year})
-          .triggers
-            if triggers
-              .trigger-count #{tags.length} triggers
-              each tags
-                .trigger-label= content
-            else
-              .no-triggers-message 0 triggers
+        = link-to 'movie' this
+          .search-result
+            .basic-info
+              img src=poster_url
+              .name
+                ' #{name}
+                if year
+                  span.year (#{year})
+            .triggers
+              if triggers
+                .trigger-count #{tags.length} triggers
+                each tags
+                  .trigger-label= content
+              else
+                .no-triggers-message 0 triggers

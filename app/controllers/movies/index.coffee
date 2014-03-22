@@ -40,8 +40,4 @@ MoviesIndexController = Em.ArrayController.extend
       'no-results'
   ).property 'searchInProgress', 'content.length'
 
-  actions:
-    goToMovie: (id) ->
-      this.transitionToRoute 'movie', id
-
 `export default MoviesIndexController`
