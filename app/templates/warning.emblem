@@ -1,7 +1,7 @@
 #warning-details
   #warning
     #tag= tag.content
-    #vote-count= voteCount
+    #vote-count= votesCount
 
   #comments
     each comments
